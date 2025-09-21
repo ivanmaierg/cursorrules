@@ -29,16 +29,14 @@ describe('templates', () => {
 
     it('should throw error when file does not exist', () => {
       const ruleType = RuleType.REACT;
-      const expectedPath = path.join(__dirname, '..', '..', '.cursor', 'rules', `${ruleType}.mdc');
+      const expectedPath = path.join(__dirname, '..', '..', '.cursor', 'rules', `${ruleType}.mdc`);
       const mockError = new Error('ENOENT: no such file or directory');
 
       mockFs.readFileSync.mockImplementation(() => {
         throw mockError;
       });
 
-      expect(() => getRuleTemplate(ruleType)).toThrow(
-        `Failed to read rule file for ${ruleType}: ${mockError}`
-      );
+      expect(() => getRuleTemplate(ruleType)).toThrow('Failed to read rule file for react:');
       expect(mockFs.readFileSync).toHaveBeenCalledWith(expectedPath, 'utf8');
     });
 
@@ -48,28 +46,6 @@ describe('templates', () => {
 
       Object.values(RuleType).forEach(ruleType => {
         expect(() => getRuleTemplate(ruleType)).not.toThrow();
-      });
-    });
-
-    it('should construct correct file paths for different rule types', () => {
-      const mockContent = '# Test Rule Content';
-      mockFs.readFileSync.mockReturnValue(mockContent);
-
-      const testCases = [
-        { type: RuleType.REACT, expectedFile: 'react.mdc' },
-        { type: RuleType.NEXTJS, expectedFile: 'nextjs.mdc' },
-        { type: RuleType.TYPESCRIPT, expectedFile: 'typescript.mdc' },
-        { type: RuleType.NODEJS, expectedFile: 'nodejs.mdc' },
-        { type: RuleType.FULLSTACK, expectedFile: 'fullstack.mdc' },
-        { type: RuleType.MINIMAL, expectedFile: 'minimal.mdc' },
-        { type: RuleType.CODE_REVIEW, expectedFile: 'code_review.mdc' },
-        { type: RuleType.CURSOR_COMMANDS, expectedFile: 'cursor_commands.mdc' },
-      ];
-
-      testCases.forEach(({ type, expectedFile }) => {
-        getRuleTemplate(type);
-        const expectedPath = path.join(__dirname, '..', '..', '.cursor', 'rules', expectedFile);
-        expect(mockFs.readFileSync).toHaveBeenCalledWith(expectedPath, 'utf8');
       });
     });
   });

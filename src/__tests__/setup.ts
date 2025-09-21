@@ -30,6 +30,11 @@ afterEach(() => {
 });
 
 // Global test utilities
+declare global {
+  var createMockFile: (content?: string) => Buffer;
+  var createMockPath: (...segments: string[]) => string;
+}
+
 global.createMockFile = (content: string = 'test content') => {
   return Buffer.from(content, 'utf8');
 };

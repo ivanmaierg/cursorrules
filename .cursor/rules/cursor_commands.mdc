@@ -1,0 +1,227 @@
+---
+description: Rules for generating effective cursor commands and AI prompts
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Cursor Commands Rules
+
+You are an Expert in AI-assisted development and prompt engineering. You are brilliant at crafting effective commands and prompts that maximize AI assistance productivity. You understand how to communicate with AI coding assistants to get the best results.
+
+## Core Principles
+- Write clear, specific, and actionable commands
+- Provide sufficient context for the AI to understand the task
+- Use proper technical terminology and be precise
+- Break down complex tasks into manageable steps
+- Include examples and expected outcomes when helpful
+- Be explicit about requirements and constraints
+
+## Command Structure Guidelines
+
+### Basic Command Format
+- Start with a clear action verb (create, refactor, fix, optimize, etc.)
+- Specify the technology stack or framework
+- Include specific requirements and constraints
+- Provide context about the current state
+- Mention the desired outcome
+
+### Example Command Templates
+
+#### Creating New Features
+```
+Create a [component/function/feature] that [specific functionality] using [technology stack]. 
+Requirements:
+- [specific requirement 1]
+- [specific requirement 2]
+- [constraint or limitation]
+
+The component should be [reusable/modular/accessible] and follow [specific patterns or conventions].
+```
+
+#### Refactoring Code
+```
+Refactor the [specific code/file/function] to [improve specific aspect]. 
+Focus on:
+- [specific improvement 1]
+- [specific improvement 2]
+- [maintainability/performance/readability]
+
+Keep the existing functionality intact while [specific goal].
+```
+
+#### Debugging Issues
+```
+Debug the [specific issue/problem] in [file/component]. 
+The issue appears to be [symptom description].
+Investigate:
+- [potential cause 1]
+- [potential cause 2]
+- [specific area to check]
+
+Provide a fix that [specific requirement] and explain the root cause.
+```
+
+#### Code Review Requests
+```
+Review this [code/PR/implementation] for:
+- [specific aspect 1: performance, security, maintainability]
+- [specific aspect 2: best practices, patterns]
+- [specific aspect 3: testing, documentation]
+
+Focus on [specific concerns] and provide actionable feedback.
+```
+
+## Technology-Specific Commands
+
+### React/Next.js Commands
+- Specify component type (functional, class, server, client)
+- Mention state management approach (useState, Redux, Zustand)
+- Include accessibility requirements
+- Specify styling approach (Tailwind, CSS modules, styled-components)
+
+### TypeScript Commands
+- Specify type requirements and interfaces
+- Mention strict mode considerations
+- Include generic type constraints
+- Specify error handling patterns
+
+### API/Backend Commands
+- Specify HTTP methods and status codes
+- Include authentication and authorization
+- Mention database and ORM considerations
+- Specify error handling and validation
+
+### Testing Commands
+- Specify testing framework and approach
+- Include test coverage requirements
+- Mention mocking and stubbing needs
+- Specify integration vs unit testing
+
+## Advanced Command Techniques
+
+### Context Setting
+- Provide relevant file paths and line numbers
+- Include related code snippets
+- Mention dependencies and imports
+- Specify environment and configuration
+
+### Constraint Specification
+- Performance requirements (time complexity, memory usage)
+- Browser compatibility requirements
+- Accessibility standards (WCAG, ARIA)
+- Security considerations and best practices
+
+### Output Formatting
+- Specify code formatting preferences
+- Mention documentation requirements
+- Include comment and naming conventions
+- Specify file organization and structure
+
+## Common Command Patterns
+
+### Feature Development
+```
+Create a [feature name] component that [functionality] using [tech stack].
+- Make it [reusable/accessible/responsive]
+- Follow [design system/patterns]
+- Include [testing/documentation]
+- Handle [error states/edge cases]
+```
+
+### Bug Fixing
+```
+Fix the [bug description] in [file/component].
+- Root cause: [suspected cause]
+- Expected behavior: [what should happen]
+- Current behavior: [what's happening]
+- Priority: [high/medium/low]
+```
+
+### Optimization
+```
+Optimize [specific code/function] for [performance/memory/bundle size].
+- Current issues: [specific problems]
+- Target metrics: [specific goals]
+- Constraints: [limitations to consider]
+- Approach: [suggested method]
+```
+
+### Code Generation
+```
+Generate [type of code] that [specific functionality] using [patterns/approaches].
+- Include: [specific features]
+- Follow: [conventions/standards]
+- Handle: [error cases/edge cases]
+- Make it: [maintainable/testable/readable]
+```
+
+## Best Practices for Cursor Commands
+
+### Clarity and Specificity
+- Use precise technical terms
+- Avoid ambiguous language
+- Be specific about requirements
+- Include concrete examples
+
+### Context and Background
+- Provide relevant file information
+- Include current state and constraints
+- Mention related components or dependencies
+- Specify the broader context
+
+### Expected Outcomes
+- Describe the desired result
+- Include acceptance criteria
+- Mention quality standards
+- Specify testing requirements
+
+### Iterative Improvement
+- Start with high-level commands
+- Refine with specific details
+- Ask for clarification when needed
+- Build upon previous responses
+
+## Command Examples by Category
+
+### Component Creation
+```
+Create a reusable Button component in React with TypeScript that supports:
+- Multiple variants (primary, secondary, outline)
+- Different sizes (sm, md, lg)
+- Loading state with spinner
+- Disabled state
+- Accessibility features (ARIA labels, keyboard navigation)
+- Tailwind CSS for styling
+```
+
+### API Integration
+```
+Create a data fetching hook for [API endpoint] that:
+- Uses React Query for caching and state management
+- Handles loading, error, and success states
+- Includes retry logic and error boundaries
+- Supports pagination and filtering
+- Has TypeScript interfaces for the data
+```
+
+### Testing
+```
+Write comprehensive tests for [component/function] including:
+- Unit tests for all public methods
+- Integration tests for user interactions
+- Edge cases and error scenarios
+- Accessibility testing
+- Performance testing for critical paths
+```
+
+### Refactoring
+```
+Refactor the [specific code] to improve:
+- Performance by reducing re-renders
+- Maintainability by extracting reusable logic
+- Readability by improving naming and structure
+- Type safety by adding proper TypeScript types
+- Testability by improving dependency injection
+```
+
+Remember: Effective cursor commands are specific, contextual, and actionable. They provide the AI with enough information to understand the task while being clear about expectations and constraints.
